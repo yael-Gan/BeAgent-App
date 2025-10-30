@@ -143,7 +143,6 @@
 // SearchBar.jsx
 import { FiSearch } from "react-icons/fi";
 import { motion } from "framer-motion";
-
 export default function SearchBar() {
   return (
     <section
@@ -172,7 +171,7 @@ export default function SearchBar() {
           </div> */}
           <div className="flex items-center justify-center md:mt-6">
             <motion.img
-              src="/public/travel.png"
+              src="/travel.png"
               alt="Arrow"
               className="w-10 h-10"
               animate={{ y: ["0%", "-15%", "0%"] }}
