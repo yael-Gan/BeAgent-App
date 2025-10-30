@@ -121,8 +121,8 @@ function Home() {
         <HotDeals deals={deals} />
         {/* Popular Categories */}
         <PopularCategories categories={categories} />
-        <FlightsList />
-        <SearchFlights />
+        {/* <FlightsList /> */}
+        {/* <SearchFlights /> */}
         {/* Footer */}
         {/* <Footer /> */}
       </div>

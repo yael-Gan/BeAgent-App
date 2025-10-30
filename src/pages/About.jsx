@@ -129,7 +129,7 @@ export default function About() {
           animate="visible"
           transition={{ duration: 1 }}
         >
-          אודות <span className="text-gradient bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">BeAgent</span>
+           <span className="text-gradient bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">BeAgent</span>
         </motion.h1>
 
         {/* פסקת פתיחה */}

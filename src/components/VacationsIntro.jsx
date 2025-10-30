@@ -36,7 +36,7 @@ export default function VacationsIntro() {
 
       {/* Main title */}
       <motion.h1
-        className="text-4xl md:text-6xl font-extrabold text-center text-gradient bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent drop-shadow-lg mb-6"
+        className="text-4xl md:text-6xl  font-normal text-center text-gradient bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent drop-shadow-lg mb-6"
         initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 120, damping: 12 }}
@@ -46,7 +46,7 @@ export default function VacationsIntro() {
 
       {/* Subtitle */}
       <motion.p
-        className="text-gray-700 text-lg md:text-xl text-center max-w-3xl mb-12 leading-relaxed"
+        className="text-gray-700 text-lg md:text-xl  font-normal text-center max-w-3xl mb-12 leading-relaxed"
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.3, duration: 1 }}

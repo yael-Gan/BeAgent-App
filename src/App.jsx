@@ -10,6 +10,7 @@ import HotDeals from './components/HotDeals';
 import DealDetails from './components/DealDetails';
 import Contact from './pages/Contact';
 import SearchFlights from './components/SearchFlights';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const deals = [
@@ -31,6 +32,7 @@ function App() {
   return (
     <>
       <Header />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginPage />} />

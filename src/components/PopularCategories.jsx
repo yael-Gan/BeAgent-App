@@ -3,7 +3,7 @@ import React from "react";
 function PopularCategories({ categories }) {
   return (
     <section className="max-w-6xl mx-auto mb-12">
-      <h2 className="text-3xl font-semibold mb-6 text-center">קטגוריות פופולריות</h2>
+      <h2 className="text-3xl font-bold text-primaryBlue  mb-6 text-center">קטגוריות פופולריות</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {categories.map((cat, index) => (
           <div

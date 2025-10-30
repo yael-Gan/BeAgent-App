@@ -124,6 +124,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
+import FlightsList from "./FlightsList";
 
 export default function SearchFlights() {
   const [departure, setDeparture] = useState("");
@@ -168,31 +169,34 @@ export default function SearchFlights() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="max-w-7xl mx-auto px-6 py-12  md:pt-32">
       {/* כותרת דינמית */}
-      <motion.h1
-        className="text-4xl md:text-5xl font-extrabold text-center text-blue-700 mb-12 relative"
-        initial={{ y: -50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      >
-        חפש טיסות ✈️
-        {/* כוכבים זוהרים סביב הכותרת */}
-        <motion.span
-          className="absolute top-0 left-1/4 text-yellow-400 text-2xl"
-          animate={{ rotate: [0, 360] }}
-          transition={{ repeat: Infinity, duration: 4 }}
-        >
-          ⭐
-        </motion.span>
-        <motion.span
-          className="absolute top-2 right-1/4 text-yellow-400 text-xl"
-          animate={{ rotate: [0, -360] }}
-          transition={{ repeat: Infinity, duration: 5 }}
-        >
-          ✨
-        </motion.span>
-      </motion.h1>
+   <motion.h1
+  className="text-5xl md:text-6xl font-normal text-center mb-12 text-blue-700 drop-shadow-md"
+  initial={{ y: -50, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+>
+  <span className="text-gradient bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent">
+    חפש טיסות ✈️
+  </span>
+
+  {/* כוכבים זוהרים סביב הכותרת */}
+  <motion.span
+    className="absolute top-0 left-1/4 text-yellow-400 text-2xl"
+    animate={{ rotate: [0, 360] }}
+    transition={{ repeat: Infinity, duration: 4 }}
+  >
+    ⭐
+  </motion.span>
+  <motion.span
+    className="absolute top-2 right-1/4 text-yellow-400 text-xl"
+    animate={{ rotate: [0, -360] }}
+    transition={{ repeat: Infinity, duration: 5 }}
+  >
+    ✨
+  </motion.span>
+</motion.h1>
 
       {/* תיבת חיפוש */}
       <motion.div
@@ -285,6 +289,7 @@ export default function SearchFlights() {
           ))}
         </div>
       )}
+      <FlightsList />
     </div>
   );
 }

@@ -93,6 +93,8 @@
 // }
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
+import { FaPlane } from "react-icons/fa";
 
 export default function FlightsList() {
   const [flights, setFlights] = useState([]);
@@ -102,10 +104,7 @@ export default function FlightsList() {
     const fetchFlights = async () => {
       try {
         const response = await axios.get("http://api.aviationstack.com/v1/flights", {
-          params: {
-            access_key: "4454695cc540e8303139bd1a843eae90",
-            limit: 5,
-          },
+          params: { access_key: "4454695cc540e8303139bd1a843eae90", limit: 5 },
         });
         setFlights(response.data.data);
       } catch (error) {
@@ -114,16 +113,33 @@ export default function FlightsList() {
         setLoading(false);
       }
     };
-
     fetchFlights();
   }, []);
 
-  if (loading) return <p className="text-center mt-10 text-gray-500">טוען טיסות...</p>;
+  // אנימציית טעינה
+  if (loading)
+    return (
+      <div className="flex flex-col items-center justify-center mt-20">
+        <motion.div
+          className="w-20 h-20 border-4 border-blue-400 border-t-transparent rounded-full"
+          animate={{ rotate: 360 }}
+          transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+        />
+        <motion.div
+          className="mt-4 text-blue-600 flex items-center gap-2 text-lg font-medium"
+          animate={{ y: [0, -5, 0] }}
+          transition={{ repeat: Infinity, duration: 0.6 }}
+        >
+          <FaPlane className="animate-bounce text-xl" />
+          טוען טיסות...
+        </motion.div>
+      </div>
+    );
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">
-        ✈️ טיסות בזמן אמת
+      <h2 className="text-3xl font-normal mb-6 text-center text-blue-600">
+         טיסות בזמן אמת
       </h2>
 
       <div className="grid gap-6 md:grid-cols-2">
