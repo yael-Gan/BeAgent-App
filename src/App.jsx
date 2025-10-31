@@ -14,6 +14,7 @@ import ScrollToTop from './components/ScrollToTop';
 import LoginSuccess from './pages/LoginSuccess';
 import RegisterSuccess from './pages/RegisterSuccess';
 import Success from './pages/Success';
+import AccessibilityPortal from './components/AccessibilityPortal';
 
 function App() {
   const deals = [
@@ -49,11 +50,12 @@ function App() {
         <Route path="/login-success" element={<LoginSuccess />} />
         <Route path="/register-success" element={<RegisterSuccess />} />
         <Route path="/success" element={<Success />} />
-        
+
 
 
 
       </Routes>
+      <AccessibilityPortal />
       <Footer />
     </>
   );

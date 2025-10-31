@@ -24,6 +24,7 @@ export default function Header() {
   const handleAboutClick = () => navigate("/about-us");
   const handleConcatClick = () => navigate("/concat-us");
   const handleFlightsClick = () => navigate("/search-flights");
+  const handleAccessibility = () => {navigate("/AccessibilityPortal");};
 
 
 
@@ -100,6 +101,7 @@ export default function Header() {
   <motion.div
     whileHover={{ scale: 1.2, rotate: 5 }}
     whileTap={{ scale: 0.9 }}
+    onClick={handleAccessibility}
     className="cursor-pointer text-primaryBlue"
   >
     <FaUniversalAccess size={25} />
