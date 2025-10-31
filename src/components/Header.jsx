@@ -86,10 +86,11 @@ export default function Header() {
     <FiSearch size={25} />
   </motion.div>
 
-  {/* ❓ עזרה */}
+  {/* ❓ אודות */}
   <motion.div
     whileHover={{ scale: 1.2, rotate: 5 }}
     whileTap={{ scale: 0.9 }}
+    onClick={handleAboutClick}
     className="cursor-pointer text-primaryBlue"
   >
     <FiHelpCircle size={25} />

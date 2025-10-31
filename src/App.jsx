@@ -11,6 +11,9 @@ import DealDetails from './components/DealDetails';
 import Contact from './pages/Contact';
 import SearchFlights from './components/SearchFlights';
 import ScrollToTop from './components/ScrollToTop';
+import LoginSuccess from './pages/LoginSuccess';
+import RegisterSuccess from './pages/RegisterSuccess';
+import Success from './pages/Success';
 
 function App() {
   const deals = [
@@ -43,9 +46,12 @@ function App() {
         <Route path="/deal/:id" element={<DealDetails />} />
         <Route path="/concat-us" element={<Contact />} />
         <Route path="/search-flights" element={<SearchFlights />} />
+        <Route path="/login-success" element={<LoginSuccess />} />
+        <Route path="/register-success" element={<RegisterSuccess />} />
+        <Route path="/success" element={<Success />} />
 
 
-        
+
       </Routes>
       <Footer />
     </>

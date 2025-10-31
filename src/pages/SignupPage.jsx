@@ -2,18 +2,24 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FiUser, FiMail, FiLock } from "react-icons/fi";
-
+import { useNavigate } from "react-router-dom";
 export default function SignupPage() {
   const [formData, setFormData] = useState({ name: "", email: "", password: "" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
+const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("User signed up:", formData);
   };
+  const handleRegister = (e) => {
+  e.preventDefault();
+  // כאן תבוא לוגיקת ההרשמה
+  navigate("/register-success");
+};
+
 
   return (
     <section className="flex items-center justify-center min-h-screen bg-gradient-to-br from-cyan-100 via-white to-blue-100 px-4">
@@ -94,6 +100,7 @@ export default function SignupPage() {
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
+            onClick={handleRegister }
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2.5 rounded-full shadow-md hover:shadow-lg transition-all font-semibold text-lg"
           >
             הרשמה
