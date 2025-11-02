@@ -142,7 +142,7 @@ export default function SearchFlights() {
 
     setLoading(true);
     try {
-      const response = await axios.get("http://api.aviationstack.com/v1/flights", {
+      const response = await axios.get("https://api.aviationstack.com/v1/flights", {
         params: {
           access_key: "4454695cc540e8303139bd1a843eae90",
           dep_iata: departure,
