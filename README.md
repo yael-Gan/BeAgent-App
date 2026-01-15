@@ -23,7 +23,7 @@ npm start
 ```
 ## 🌐 Deployment
 The project is deployed on Vercel:
-🔗 https://coupon-system-frontend.vercel.app/
+🔗 https://beagentapp.vercel.app/
 
 ## 📂 Project Structure
 src/
