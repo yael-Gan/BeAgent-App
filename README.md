@@ -1,5 +1,8 @@
 
 Frontend application for managing coupons, built with React.
+start
+##🌐 Deployment
+The project is deployed on Vercel: 🔗 https://beagentapp.vercel.app/
 
 ## 🚀 Project Overview
 This project is a client-side web application for managing coupons.
